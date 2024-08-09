@@ -8,7 +8,6 @@ This project is a simple web application for sentiment analysis of IMDB movie re
 - [Usage](#usage)
 - [Project Structure](#project-structure)
 - [How It Works](#how-it-works)
-- [Acknowledgements](#acknowledgements)
 
 ## Installation
 
@@ -33,7 +32,16 @@ To run this project locally, follow these steps:
 5. **Run the Streamlit app:**
     ```bash
     streamlit run app.py
+    
     ```
+## project structure
+Model: The app uses a pre-trained RNN model that was trained on the IMDB dataset. The model is designed to classify the sentiment of movie reviews as either positive or negative.
+
+User Input: Users can input a movie review into the text area provided in the web interface.
+
+Preprocessing: The input text is tokenized and converted into a sequence of integers based on the IMDB word index. This sequence is then padded to a fixed length (500) to ensure compatibility with the model.
+
+Prediction: The preprocessed input is fed into the model, which outputs a probability score. If the score is greater than 0.5, the review is classified as "Positive"; otherwise, it's classified as "Negative".
 
 ## Usage
 
